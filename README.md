@@ -297,24 +297,6 @@ python3 benchmark.py 10.0.0.100
 
 ---
 
-## 💡 Comprehensive Viva Questions & Technical Answers
-
-### Q1: Why use binary length-prefix framing (`struct.pack`) over newline delimiters (`\n`)?
-**Answer:** TCP is a continuous byte-stream abstraction without any message boundaries. If multiple messages are queued or network congestion delays transmission, TCP segments may arrive fragmented or concatenated (sticky packets). Delimiters like `\n` fail when message payloads contain embedded newlines or binary data. By prefixing each payload with a fixed 4-byte network byte-order unsigned integer (`!I`), the receiver knows precisely how many bytes to read before deserializing JSON, guaranteeing frame integrity.
-
-### Q2: How does the Socket Application communicate with the SDN Controller?
-**Answer:** The architecture uses a Northbound REST interface. The POX SDN controller runs an embedded HTTP server on port `8080`. When an event occurs at the socket application layer (such as a user entering `#emergency` or violating message rate thresholds), `chat_server.py` issues an asynchronous HTTP POST request to the controller's `/chat/policy/prioritize` or `/chat/policy/block` endpoint. POX parses the request and constructs an OpenFlow `ofp_flow_mod` message pushed down to the switch datapaths.
-
-### Q3: What is the purpose of OpenFlow Table-Miss entries vs. High-Priority Flow entries?
-**Answer:** 
-- **Table-Miss (`priority=0`):** Catches all unmatched traffic and forwards it to the controller (`OFPP_CONTROLLER`) via an `ofp_packet_in` event so the controller can learn MAC addresses.
-- **Priority Rules (`priority=20000` to `65000`):** OpenFlow evaluates matching criteria strictly in order of decreasing priority. When a drop rule (`priority=65000`) is active, the switch kernel datapath immediately discards the packet without consulting the controller or consuming CPU cycles on the host.
-
-### Q4: How does Mininet virtualize network nodes on a single Linux operating system?
-**Answer:** Mininet leverages Linux **Network Namespaces (`ip netns`)**. Each host (`h1`, `h_server`) has its own independent network stack, routing table, ARP cache, and loopback interface. Virtual Ethernet link pairs (`veth`) connect each namespace to virtual Open vSwitch ports, allowing standard Linux tools (`netstat`, `iperf`, `ping`) to execute identically to physical hardware.
-
----
-
 ## 🖥 Headless Mode Execution (Without GUI / xterm)
 
 If your environment cannot launch `xterm` popup windows (e.g., inside headless cloud servers or pure SSH), run clients inside Mininet host namespaces using `mnexec`:
