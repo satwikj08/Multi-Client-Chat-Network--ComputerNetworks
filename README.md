@@ -5,7 +5,7 @@
 ![SDN-Controller](https://img.shields.io/badge/SDN-POX%20%2F%20OpenFlow%201.0-green.svg)
 ![Platform](https://img.shields.io/badge/Platform-Ubuntu%20Linux-red.svg)
 
-An enterprise-grade, low-level network application combining **BSD TCP Socket Programming**, **Software-Defined Networking (SDN)**, and **Mininet Network Virtualization**. 
+An enterprise-grade, low-level network application combining **TCP Socket Programming**, **Software-Defined Networking (SDN)**, and **Mininet Network Virtualization**. 
 
 This project demonstrates programmable network control where application-level socket state events (such as channel switching and malicious flood detection) dynamically push flow modifications (`OFPFlowMod`) to Open vSwitch (OVS) kernel datapaths in real time via an SDN Northbound REST API.
 
