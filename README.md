@@ -4,7 +4,6 @@
 ![Mininet](https://img.shields.io/badge/Mininet-2.3.0%2B-orange.svg)
 ![SDN-Controller](https://img.shields.io/badge/SDN-POX%20%2F%20OpenFlow%201.0-green.svg)
 ![Platform](https://img.shields.io/badge/Platform-Ubuntu%20Linux-red.svg)
-![Course](https://img.shields.io/badge/Course-UE25CS243A-purple.svg)
 
 An enterprise-grade, low-level network application combining **BSD TCP Socket Programming**, **Software-Defined Networking (SDN)**, and **Mininet Network Virtualization**. 
 
