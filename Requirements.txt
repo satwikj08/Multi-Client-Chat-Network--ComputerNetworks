@@ -1,0 +1,5 @@
+# Python dependencies for Multi-Client Dynamic SDN Chat Network
+# Project 8 (TCP Sockets + POX SDN Controller + Mininet)
+
+# HTTP library used by chat_server.py to communicate with the SDN controller REST API
+requests>=2.28.0
