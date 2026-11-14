@@ -24,6 +24,16 @@ This project demonstrates programmable network control where application-level s
 
 ---
 
+## 🎯 Problem Statement
+
+In a multi-client network environment, managing simultaneous communication while maintaining efficient traffic handling and network security is a major challenge. Traditional client-server chat applications primarily focus on message exchange and do not provide dynamic network-level control based on application events or user behavior. This can lead to inefficient traffic handling, lack of prioritization for important communication, and difficulty managing clients generating excessive or malicious traffic.
+
+The problem is to develop a TCP socket-based multi-client chat network integrated with Software-Defined Networking (SDN) using Mininet and a POX controller. The system should enable multiple users to connect and communicate simultaneously through public chat rooms and private messaging while allowing the SDN controller to dynamically manage network traffic. It should support traffic prioritization for designated priority channels, detect excessive message activity, and enforce network-level blocking policies against malicious clients.
+
+The system should also demonstrate reliable concurrent communication, effective interaction between the socket application and the SDN controller, and measurable performance under different client loads and network conditions. Its scalability and effectiveness should be evaluated using metrics such as response latency, jitter, and packet loss, including a comparison between standard traffic handling and SDN-based dynamic prioritization.
+
+---
+
 ## 🚀 Project Overview & Objectives
 
 In legacy networked systems, application layer servers and network layer switches operate as isolated silos. If a host misbehaves or requires priority bandwidth, the application layer must absorb the overhead. 
