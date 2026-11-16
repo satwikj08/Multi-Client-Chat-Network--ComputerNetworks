@@ -85,14 +85,15 @@ $$\text{Wire Frame} = \underbrace{[\text{Length: 4 Bytes (uint32, Big-Endian)}]}
 
 ```text
 sdn-socket-chat-network/
-├── chat_server.py                # Multi-threaded TCP server with integrated SDN REST client
-├── chat_client.py                # Interactive dual-threaded terminal socket client
-├── chat_topo.py                  # Mininet multi-switch topology script (TCLink, bandwidth limits)
-├── sdn_controller.py             # Custom POX SDN controller module with REST policy hooks
-├── benchmark.py                  # Automated multi-client benchmark & OVS flow inspector
-├── requirements.txt              # Python dependency manifest
-├── Project Execution Guide.pdf   # Step by Step Instructions For Execution
-└── README.md                     # Complete project documentation
+├── chat_server.py                                    # Multi-threaded TCP server with integrated SDN REST client
+├── chat_client.py                                    # Interactive dual-threaded terminal socket client
+├── chat_topo.py                                      # Mininet multi-switch topology script (TCLink, bandwidth limits)
+├── sdn_controller.py                                 # Custom POX SDN controller module with REST policy hooks
+├── benchmark.py                                      # Automated multi-client benchmark & OVS flow inspector
+├── requirements.txt                                  # Python dependency manifest
+├── Project Execution Guide.pdf                       # Step by Step Instructions For Execution
+├── Multi-Client Chat Network Project Report.pdf      # Complete Report of the Project
+└── README.md                                         # Complete project documentation
 
 ```
 
