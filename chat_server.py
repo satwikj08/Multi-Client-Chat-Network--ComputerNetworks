@@ -13,7 +13,7 @@ import sys
 
 LISTEN_HOST = '0.0.0.0'
 LISTEN_PORT = 9000
-SDN_REST_ENDPOINT = 'http://127.0.0.1:8080'
+SDN_REST_ENDPOINT = 'http://10.0.0.254:8080'
 
 # In-memory synchronization structures
 state_lock = threading.Lock()
