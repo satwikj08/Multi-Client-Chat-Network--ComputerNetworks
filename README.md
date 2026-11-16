@@ -289,24 +289,6 @@ python3 benchmark.py 10.0.0.100
 
 ---
 
-## 📋 Rubric & Deliverable Mapping
-
-| Component | Marks | How This Project Satisfies the Requirement |
-| :--- | :---: | :--- |
-| **Problem Understanding & Architecture** | 2 | Decoupled client-server-controller architecture with formal length-prefixed protocol. |
-| **TCP Socket Implementation** | 4 | Low-level BSD streaming sockets, multi-threading (`threading`), binary length framing. |
-| **Mininet + SDN Implementation** | 4 | Multi-switch Mininet topology, functional POX OpenFlow controller, full reachability. |
-| **Socket-SDN Integration** | 3 | Northbound REST API (`HTTP POST :8080`) bridges chat events to OpenFlow rules. |
-| **Initial Testing & Demo** | 2 | Verified `pingall` 0% drop, user registration, chat room discovery (`/rooms`, `/users`). |
-| **Complete Application Functionality** | 4 | Public multi-channel broadcast, private 1-to-1 messaging, user session handling. |
-| **Dynamic SDN Functionality** | 6 | Automatic flow rule generation (`priority=30000`, `priority=65000`) upon room join or abuse. |
-| **Challenging Scenario / Robustness** | 4 | Dynamic rate-limiting and OVS kernel packet dropping against malicious spammers. |
-| **Performance Evaluation & Comparison**| 5 | Empirical concurrency testing (5 to 50 clients), latency/jitter benchmarking tables. |
-| **Documentation & Viva** | 6 | Fully structured repository, execution manual, and technical viva preparation. |
-| **TOTAL** | **40** | **Complete implementation across all rubric criteria.** |
-
----
-
 ## 🖥 Headless Mode Execution (Without GUI / xterm)
 
 If your environment cannot launch `xterm` popup windows (e.g., inside headless cloud servers or pure SSH), run clients inside Mininet host namespaces using `mnexec`:
