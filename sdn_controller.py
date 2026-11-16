@@ -85,7 +85,7 @@ class RESTRequestHandler(BaseHTTPRequestHandler):
 
 
 def run_rest_server():
-    server = HTTPServer(('127.0.0.1', 8080), RESTRequestHandler)
+    server = HTTPServer(('0.0.0.0', 8080), RESTRequestHandler)
     log.info("[SDN] REST Policy Bridge listening on http://127.0.0.1:8080")
     server.serve_forever()
 
